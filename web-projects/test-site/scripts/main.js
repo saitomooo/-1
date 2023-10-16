@@ -22,12 +22,12 @@ function setUserName() {
       myHeading.textContent = `${myName} さん、Mozilla はかっこいいよ。`;
     }
 }
-  if (!localStorage.getItem("name")) {
+if (!localStorage.getItem("name")) {
     setUserName();
-  } else {
+} else {
     const storedName = localStorage.getItem("name");
     myHeading.textContent = `Mozilla はかっこいいよ、${storedName}`;
-  }
-  myButton.onclick = () => {
+}
+myButton.onclick = () => {
     setUserName();
-  };
+};
